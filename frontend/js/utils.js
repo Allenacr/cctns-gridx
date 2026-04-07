@@ -17,7 +17,12 @@ const Utils = {
             const res = await fetch(`${API_BASE}${endpoint}`, { ...options, headers });
             if (res.status === 401) { this.logout(); return null; }
             const data = await res.json();
-            if (!res.ok) throw new Error(data.detail || 'API Error');
+            if (!res.ok) {
+                if (Array.isArray(data.detail) && data.detail.length > 0) {
+                    throw new Error(`${data.detail[0].loc[data.detail[0].loc.length - 1]}: ${data.detail[0].msg}`);
+                }
+                throw new Error(data.detail || 'API Error');
+            }
             return data;
         } catch (err) {
             console.error(`API Error [${endpoint}]:`, err);

@@ -36,7 +36,7 @@ function renderFIRForm() {
                     <div class="form-group full-width"><label class="form-label">Address</label><input type="text" class="form-input" id="location_address" placeholder="Street, Area, City"></div>
                 </div></div>
                 <div class="form-section"><div class="form-section-title">👤 Complainant</div><div class="form-grid">
-                    <div class="form-group"><label class="form-label">Name <span class="required">*</span></label><input type="text" class="form-input" id="complainant_name" required></div>
+                    <div class="form-group"><label class="form-label">Name <span class="required">*</span></label><input type="text" class="form-input" id="complainant_name" required minlength="2"></div>
                     <div class="form-group"><label class="form-label">Age</label><input type="number" class="form-input" id="complainant_age" min="1" max="120"></div>
                     <div class="form-group"><label class="form-label">Gender</label><select class="form-select" id="complainant_gender"><option value="">-</option><option>Male</option><option>Female</option><option>Other</option></select></div>
                     <div class="form-group"><label class="form-label">Contact</label><input type="tel" class="form-input" id="complainant_contact"></div>
@@ -47,7 +47,7 @@ function renderFIRForm() {
                     <div class="form-group"><label class="form-label">Gender</label><select class="form-select" id="accused_gender"><option value="">-</option><option>Male</option><option>Female</option><option>Other</option></select></div>
                 </div></div>
                 <div class="form-section"><div class="form-section-title">📝 Description</div><div class="form-grid">
-                    <div class="form-group full-width"><label class="form-label">Incident Description <span class="required">*</span></label><textarea class="form-textarea" id="description" required placeholder="Detailed account of the incident..."></textarea></div>
+                    <div class="form-group full-width"><label class="form-label">Incident Description <span class="required">*</span></label><textarea class="form-textarea" id="description" required minlength="10" placeholder="Detailed account of the incident..."></textarea></div>
                     <div class="form-group full-width"><label class="form-label">Modus Operandi</label><input type="text" class="form-input" id="modus_operandi" placeholder="How was the crime committed?"></div>
                 </div></div>
                 <div class="form-actions"><button type="reset" class="btn btn-secondary">Clear</button><button type="submit" class="btn btn-primary" id="submitBtn">📋 Register FIR</button></div>
