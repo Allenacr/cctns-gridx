@@ -1,0 +1,21 @@
+/* CCTNS-GridX — Analytics Styles */
+.analytics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-lg); }
+.analytics-full { grid-column: 1 / -1; }
+.prediction-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--space-lg); }
+.prediction-result { display: flex; align-items: center; gap: var(--space-lg); padding: var(--space-lg); background: var(--accent-cyan-dim); border-radius: var(--radius-md); margin-top: var(--space-md); }
+.prediction-result .pred-type { font-size: 1.2rem; font-weight: 700; color: var(--accent-cyan); }
+.prediction-result .pred-confidence { font-size: 2rem; font-weight: 800; font-family: var(--font-mono); color: var(--accent-cyan); }
+.probability-bars { margin-top: var(--space-md); }
+.prob-bar-row { display: flex; align-items: center; gap: var(--space-md); margin-bottom: 8px; }
+.prob-bar-label { width: 140px; font-size: 0.82rem; color: var(--text-secondary); }
+.prob-bar-track { flex: 1; height: 8px; background: var(--bg-tertiary); border-radius: 4px; overflow: hidden; }
+.prob-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--accent-cyan), var(--accent-magenta)); transition: width 0.6s ease; }
+.prob-bar-value { width: 50px; font-size: 0.82rem; color: var(--text-primary); font-family: var(--font-mono); text-align: right; }
+.feature-importance { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: var(--space-sm); }
+.feature-item { display: flex; align-items: center; gap: var(--space-sm); padding: 8px 12px; background: var(--bg-tertiary); border-radius: var(--radius-md); }
+.feature-item .rank { font-weight: 700; color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.85rem; }
+.trend-indicator { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: var(--radius-sm); font-size: 0.78rem; font-weight: 600; }
+.trend-indicator.up { background: rgba(255,23,68,0.1); color: var(--accent-red); }
+.trend-indicator.down { background: rgba(0,230,118,0.1); color: var(--accent-green); }
+.trend-indicator.stable { background: rgba(41,121,255,0.1); color: var(--accent-blue); }
+@media (max-width: 1024px) { .analytics-grid { grid-template-columns: 1fr; } }

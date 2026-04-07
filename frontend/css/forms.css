@@ -1,0 +1,37 @@
+/* CCTNS-GridX — Form Styles */
+.form-page { max-width: 1000px; }
+.form-section { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-lg); }
+.form-section-title { font-size: 1rem; font-weight: 600; color: var(--accent-cyan); margin-bottom: var(--space-lg); padding-bottom: var(--space-sm); border-bottom: 1px solid var(--border-color); display: flex; align-items: center; gap: var(--space-sm); }
+.form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-md); }
+.form-group { display: flex; flex-direction: column; gap: 6px; }
+.form-group.full-width { grid-column: 1 / -1; }
+.form-label { font-size: 0.82rem; font-weight: 500; color: var(--text-secondary); }
+.form-label .required { color: var(--accent-red); margin-left: 2px; }
+.form-input, .form-select, .form-textarea { background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 10px 14px; color: var(--text-primary); font-family: var(--font-sans); font-size: 0.88rem; transition: all var(--transition-fast); width: 100%; }
+.form-input:hover, .form-select:hover, .form-textarea:hover { border-color: var(--border-light); }
+.form-input:focus, .form-select:focus, .form-textarea:focus { outline: none; border-color: var(--accent-cyan); box-shadow: 0 0 0 3px var(--accent-cyan-dim); }
+.form-input::placeholder { color: var(--text-muted); }
+.form-select { appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0a0b8'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; background-size: 18px; padding-right: 36px; cursor: pointer; }
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-actions { display: flex; justify-content: flex-end; gap: var(--space-md); padding-top: var(--space-lg); border-top: 1px solid var(--border-color); margin-top: var(--space-lg); }
+.form-success { text-align: center; padding: var(--space-2xl); }
+.form-success .success-icon { font-size: 3rem; margin-bottom: var(--space-md); }
+.form-success .fir-number { font-family: var(--font-mono); font-size: 1.2rem; color: var(--accent-cyan); background: var(--accent-cyan-dim); padding: 8px 16px; border-radius: var(--radius-md); display: inline-block; margin-top: var(--space-md); }
+.form-input.error, .form-select.error { border-color: var(--accent-red); box-shadow: 0 0 0 3px rgba(255,23,68,0.1); }
+.form-error { font-size: 0.75rem; color: var(--accent-red); }
+.login-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--bg-primary); position: relative; overflow: hidden; }
+.login-container { width: 100%; max-width: 420px; z-index: 1; }
+.login-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: var(--space-2xl); backdrop-filter: blur(16px); animation: fadeInUp 0.6s ease; }
+.login-brand { text-align: center; margin-bottom: var(--space-xl); }
+.login-brand .logo-mark { width: 64px; height: 64px; margin: 0 auto var(--space-md); background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: 900; color: #000; box-shadow: var(--shadow-glow-cyan); }
+.login-brand h1 { font-size: 1.6rem; margin-bottom: 4px; background: linear-gradient(135deg, var(--accent-cyan), var(--accent-magenta)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.login-brand p { font-size: 0.82rem; color: var(--text-muted); }
+.login-form { display: flex; flex-direction: column; gap: var(--space-md); }
+.login-form .form-input { padding: 12px 16px; font-size: 0.92rem; }
+.login-btn { width: 100%; padding: 12px; font-size: 0.95rem; font-weight: 600; margin-top: var(--space-sm); justify-content: center; }
+.login-demo { margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid var(--border-color); }
+.login-demo h4 { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: var(--space-sm); text-align: center; }
+.demo-accounts { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.demo-btn { padding: 6px 12px; font-size: 0.75rem; border-radius: var(--radius-sm); background: var(--bg-tertiary); border: 1px solid var(--border-color); color: var(--text-secondary); cursor: pointer; transition: all var(--transition-fast); }
+.demo-btn:hover { border-color: var(--accent-cyan); color: var(--accent-cyan); }
+.tn-gov-badge { text-align: center; margin-top: var(--space-lg); font-size: 0.72rem; color: var(--text-muted); }
