@@ -28,7 +28,7 @@ AES_KEY = os.environ.get("AES_KEY", secrets.token_hex(16))  # 256-bit
 CORS_ORIGINS = ["*"]
 
 # ─── AI Model Params ────────────────────────────────────────
-DBSCAN_EPS = 0.005          # ~0.5 km radius for hotspot clustering
+DBSCAN_EPS = 0.02           # ~2.2 km radius for hotspot clustering
 DBSCAN_MIN_SAMPLES = 5      # Minimum crimes for a hotspot
 KDE_BANDWIDTH = 0.01        # Kernel density estimation bandwidth
 RF_N_ESTIMATORS = 100       # Random Forest trees
